@@ -1,17 +1,31 @@
-> This is my submission for the technical assessment which involves using C#, Entity Framework, and SQL.
-> The main function of this program is to obtain data from the two given API endpoints and save it to a SQL Database.
-> The program also displays the saved data in the console.
+# Technical Assessment Submission
 
-DATABASE SETUP:
-> To setup the database, I used the SQL Server Management Studio 20.
-> I created a new database named "APIFetcherDB".
+This repository contains my submission for the technical assessment, which involves using C#, Entity Framework, and SQL. The main functionality of this program is to obtain data from two given API endpoints, save it to a SQL Database, and display the saved data in the console.
 
-NOTES:
-> You may need to run this command in a terminal: dotnet tool install --global dotnet-ef
-> And run this command to refresh the project dependencies that were installed before in the project: dotnet restore
-> Finally run this command to apply the migrations and update the database: dotnet ef database update
+## Features
 
-> This line of code, specifically in the parenthesis should be changed to whatever the local host server name in your machine is.
-> Server=(INSERT LOCAL HOST SERVER NAME) in the model.cs file at line 10.
+- Fetch data from specified API endpoints.
+- Store data in a SQL Server database.
+- Display data in the console.
+
+## Database Setup
+
+To set up the database, I used SQL Server Management Studio 20. The database is named **`APIFetcherDB`**.
+
+### Steps to Set Up the Database
+
+1. **Create a New Database**:
+   - Open SQL Server Management Studio.
+   - Connect to your local SQL Server instance.
+   - Create a new database named `APIFetcherDB`.
+
+2. **Configure Connection String**:
+   - Update the connection string in the `DatabaseContext` class.
+   - Locate the line in `model.cs` at line 10.
+   - Replace `Server=(INSERT LOCAL HOST SERVER NAME)` with your local server name.
+
+Example:
+```csharp
+optionsBuilder.UseSqlServer("Server=YOUR_SERVER_NAME;Database=APIFetcherDB;Trusted_Connection=True;");
 
 
