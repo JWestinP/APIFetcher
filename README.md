@@ -23,9 +23,18 @@ To set up the database, I used SQL Server Management Studio 20. The database is 
    - Update the connection string in the `DatabaseContext` class.
    - Locate the line in `model.cs` at line 10.
    - Replace `Server=(INSERT LOCAL HOST SERVER NAME)` with your local server name.
+   - optionsBuilder.UseSqlServer("Server=YOUR_SERVER_NAME;Database=APIFetcherDB;Trusted_Connection=True;");
 
-Example:
-```csharp
-optionsBuilder.UseSqlServer("Server=YOUR_SERVER_NAME;Database=APIFetcherDB;Trusted_Connection=True;");
+### Documentations 
+Here are some of the documentation and resources that I used as a guide during the development of this project:
+1. **Microsoft**:
+   - https://learn.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli
+   - https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client
+     
+
+
+  
+
+
 
 
